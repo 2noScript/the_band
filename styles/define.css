@@ -3,10 +3,13 @@
   --header-height: 46.5px;
 
   /* color */
-  --header-color: #000000;
+  --black: #000000;
   --white: #ffffff;
+  --red: red;
+  --white-hov: #cccccc;
   /* bg-color */
   --header-bg: #000000;
+  --bg-btn-hov: #cccccc;
 }
 
 .cursor-pointer {

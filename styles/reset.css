@@ -5,11 +5,14 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 1.6rem;
   font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  /* scroll-behavior: smooth; */
 }
 a {
   text-decoration: none;

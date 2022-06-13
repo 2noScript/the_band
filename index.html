@@ -5,19 +5,237 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Band</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/2noScript/font-awesome/main/fontawesome-pro-5.13.0-web/css/all.min.css"
+    />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/define.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+
+    <script src="./scripts/index.js" async></script>
   </head>
   <body>
     <header>
       <div class="menu">
         <div class="menu-item"><a href="">home</a></div>
-        <div class="menu-item"><a href="">band</a></div>
-        <div class="menu-item"><a href="">tour</a></div>
-        <div class="menu-item"><a href="">contact</a></div>
-        <div class="menu-item"><a href="">more</a></div>
+        <div class="menu-item"><a href="#band">band</a></div>
+        <div class="menu-item"><a href="#tour">tour</a></div>
+        <div class="menu-item"><a href="#contact">contact</a></div>
+        <div class="menu-item plus-sub">
+          <div class="is-more">
+            <a href="">more</a>
+            <span class="more-ico">
+              <i class="fas fa-sort-down"></i>
+            </span>
+          </div>
+          <div class="sub-box">
+            <div class="sub-item">Merchandise</div>
+            <div class="sub-item">Extras</div>
+            <div class="sub-item">Media</div>
+          </div>
+        </div>
       </div>
+      <div class="search"><i class="fas fa-search ico"></i></div>
     </header>
+    <div class="main">
+      <div class="slide">
+        <div class="slide-item">
+          <img src="./images/slider/1.jpg" alt="" class="slide-bg" />
+          <div class="slide-title">
+            <div class="name">Los Angeles</div>
+            <div class="info">
+              We had the best time playing at Venice Beach!
+            </div>
+          </div>
+        </div>
+        <div class="slide-item">
+          <img src="./images/slider/2.jpg" alt="" class="slide-bg" />
+          <div class="slide-title">
+            <div class="name">New York</div>
+            <div class="info">The atmosphere in New York is lorem ipsum.</div>
+          </div>
+        </div>
+        <div class="slide-item visible">
+          <img src="./images/slider/3.jpg" alt="" class="slide-bg" />
+          <div class="slide-title">
+            <div class="name">Chicago</div>
+            <div class="info">
+              Thank you, Chicago - A night we won't forget.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="the-band" id="band">
+        <div class="container-info">
+          <div class="container-head">
+            <h2>the band</h2>
+            <p>We love music</p>
+          </div>
+          <div class="container-content">
+            <p>
+              We have created a fictional band website. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="wrapper-cards">
+              <div class="wrapper-cards-item">
+                <p class="title">name</p>
+                <img src="./images/band/bandmember.jpg" alt="" />
+              </div>
+              <div class="wrapper-cards-item">
+                <p class="title">name</p>
+                <img src="./images/band/bandmember.jpg" alt="" />
+              </div>
+              <div class="wrapper-cards-item">
+                <p class="title">name</p>
+                <img src="./images/band/bandmember.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-dates" id="tour">
+        <div class="container-info">
+          <div class="container-head">
+            <h2>tour dates</h2>
+            <p>Remember to book your tickets!</p>
+          </div>
+          <div class="container-content">
+            <div class="ticket-stat">
+              <div class="stat-item">
+                <span class="month">September </span>
+                <span class="status">Sold out</span>
+              </div>
+              <div class="stat-item">
+                <span class="month">October</span>
+                <span class="status">Sold out</span>
+              </div>
+              <div class="stat-item">
+                <span class="month">November</span>
+                <span class="status three">3</span>
+              </div>
+            </div>
+            <div class="ticket-card">
+              <div class="ticket-card-item">
+                <img src="./images/tour/newyork.jpg" alt="" />
+                <div class="ticket-card-content">
+                  <div class="name">New York</div>
+                  <div class="date">Fri 27 Nov 2016</div>
+                  <p class="describe">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button>Buy Tickets</button>
+                </div>
+              </div>
+              <div class="ticket-card-item">
+                <img src="./images/tour/paris.jpg" alt="" />
+                <div class="ticket-card-content">
+                  <div class="name">Paris</div>
+                  <div class="date">Sat 28 Nov 2016</div>
+                  <p class="describe">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button>Buy Tickets</button>
+                </div>
+              </div>
+
+              <div class="ticket-card-item">
+                <img src="./images/tour/sanfran.jpg" alt="" />
+                <div class="ticket-card-content">
+                  <div class="name">San Francisco</div>
+                  <div class="date">Sun 29 Nov 2016</div>
+                  <p class="describe">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button>Buy Tickets</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact" id="contact">
+        <div class="container-info">
+          <div class="container-head">
+            <h2>contact</h2>
+            <p>Fan? Drop a note!</p>
+          </div>
+          <div class="container-content">
+            <div class="contact-wrapper">
+              <div class="col col-1">
+                <div class="address">
+                  <i class="fas fa-map-marker-alt"></i> <span>Chicago, US</span>
+                </div>
+                <div class="address">
+                  <i class="fas fa-phone-alt"></i>
+                  <span> Phone: +00 151515</span>
+                </div>
+                <div class="address">
+                  <i class="fas fa-envelope"></i>
+                  <span> Email: mail@mail.com </span>
+                </div>
+              </div>
+              <div class="col col-2">
+                <div class="contact-input">
+                  <input type="text" placeholder="Name" class="name" />
+                  <input type="email" placeholder="Email" class="email" />
+                </div>
+                <input type="text" placeholder="Message" class="message" />
+                <button>SEND</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./images/map/map.jpg" alt="" class="map" />
+    </div>
+    <footer>
+      <div class="inter">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-snapchat"></i>
+        <i class="fab fa-pinterest-p"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+      <div class="author">
+        Powered by <a href="https://github.com/2noScript">2noScript</a>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-name">
+          <i class="fas fa-suitcase"></i>
+          <span> Tickets </span>
+          <button><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-content">
+          <div class="row">
+            <div class="title">
+              <i class="fas fa-shopping-cart"></i>
+              Tickets, $15 per person
+            </div>
+            <input type="text" placeholder="How many?" />
+          </div>
+          <div class="row">
+            <div class="title">
+              <i class="fas fa-user"></i>
+              Send To
+            </div>
+            <input type="email" placeholder="Enter email" />
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

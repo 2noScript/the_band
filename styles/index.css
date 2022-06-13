@@ -1,21 +1,434 @@
 /* header  */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   height: var(--header-height);
-  background-color: var(--header-bg);
+  background-color: var(--black);
   color: white;
 }
-
+/* menu */
 header .menu {
   display: flex;
   align-items: center;
   height: 100%;
 }
 header .menu-item {
-  padding: 4px 4px;
+  padding: 12px 24px;
+  height: 100%;
 }
-
+header .menu-item:hover {
+  background-color: var(--bg-btn-hov);
+  cursor: pointer;
+}
 header .menu-item a {
   color: var(--white);
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+header .menu-item:hover a {
+  color: var(--black);
+}
+
+header .menu-item .is-more .more-ico {
+  position: relative;
+  margin-left: 2px;
+}
+header .menu-item .is-more .more-ico i {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+header .menu-item.plus-sub {
+  position: relative;
+  /* display: none; */
+}
+
+header .menu-item.plus-sub:hover .sub-box {
+  display: block;
+}
+header .menu .sub-box {
+  top: 100%;
+  left: 0;
+  position: absolute;
+  width: 160px;
+  background-color: var(--white);
+  z-index: 100;
+  display: none;
+}
+header .menu .sub-item {
+  padding: 8px 16px;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+header .menu .sub-item:hover {
+  color: var(--white);
+  background-color: var(--bg-btn-hov);
+}
+
+/* search */
+.search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 61.94px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: azure; */
+}
+.search:hover {
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+/* main */
+.main {
+  padding-top: var(--header-height);
+  /* height: 3000px; */
+}
+/* slide */
+.slide {
+  width: 100%;
+  position: relative;
+  background-color: blue;
+}
+.slide .slide-item {
+}
+.slide .slide-bg {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+.slide-title {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 325px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  padding: 48px 32px;
+}
+.slide-title .name,
+.slide-title .info {
+  color: var(--white);
+}
+.slide-title .name {
+  font-size: 2.4rem;
+  padding: 10px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+}
+.slide-title .info {
+  font-size: 1.5rem;
+  padding: 0 16px;
+  font-weight: 750;
+}
+.slide-item {
+  display: none;
+}
+.slide-item.visible {
+  display: block;
+}
+
+/* the   */
+
+.container-info {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  width: 800px;
+  height: 100%;
+  /* background-color: aqua; */
+}
+.container-info .container-head {
+  text-align: center;
+}
+.container-info .container-head h2 {
+  letter-spacing: 4px;
+  font-size: 3rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+}
+.container-info .container-head p {
+  text-transform: capitalize;
+  margin: 15px 0;
+  font-style: italic;
+  color: #666666;
+}
+.the-band,
+.tour-dates,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* the band */
+.the-band {
+  height: 672px;
+}
+.the-band .container-content p {
+  text-align: justify;
+}
+.the-band .wrapper-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  padding: 32px 0;
+}
+.the-band .wrapper-cards-item {
+  flex: 0 0 33.33333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.the-band .wrapper-cards img {
+  border-style: none;
+  width: 60%;
+  border-radius: 4px;
+}
+.the-band .wrapper-cards p {
+  margin: 15px 0;
+  text-transform: capitalize;
+}
+
+/* tour dates */
+.tour-dates {
+  background-color: var(--black);
+}
+.tour-dates .container-head h2 {
+  color: var(--white);
+}
+.tour-dates .ticket-stat {
+  background-color: var(--white);
+  margin-top: 36px;
+}
+.tour-dates .ticket-stat .stat-item {
+  position: relative;
+  padding: 8px 16px;
+  border-bottom: 0.5px solid #ccc;
+}
+.tour-dates .ticket-stat .status {
+  background-color: var(--red);
+  padding: 2px 8px;
+  margin-left: 16px;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.tour-dates .ticket-stat .three {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--black);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 32px;
+}
+.tour-dates .ticket-card {
+  display: flex;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 32px 8px;
+}
+.tour-dates .ticket-card-item {
+  padding: 0 8px;
+  flex: 33.333%;
+}
+
+.tour-dates .ticket-card-item img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.tour-dates .ticket-card-content {
+  background-color: var(--white);
+  padding: 0 15px 16px;
+}
+.tour-dates .ticket-card-content .name {
+  /* margin: 15px 0; */
+  padding: 15px 0;
+  font-weight: 600;
+}
+.tour-dates .ticket-card-content .date {
+  font-size: 1.6rem;
+  color: #666666;
+}
+.tour-dates .ticket-card-content .describe {
+  padding: 15px 0;
+}
+.tour-dates .ticket-card-content button {
+  padding: 12px 16px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  /* outline: none; */
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* contact s */
+.contact .contact-wrapper {
+  display: flex;
+  padding: 84px 16px;
+}
+.contact .contact-wrapper .col {
+  flex: 50%;
+}
+.contact .contact-wrapper .col-1 {
+}
+.contact .contact-wrapper .col-1 .address {
+  font-size: 1.8rem;
+}
+.contact .contact-wrapper .col-1 .address span {
+  margin: 12px;
+}
+.contact .contact-wrapper .col-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-wrapper .col-2 input {
+  padding: 8px;
+}
+.contact .contact-wrapper .col-2 .contact-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact-wrapper .col-2 .name,
+.contact .contact-wrapper .col-2 .email {
+  /* background-color: #666666; */
+  width: 47%;
+}
+.contact .contact-wrapper .col-2 .message {
+  margin-top: 12px;
+}
+
+.contact .contact-wrapper .col-2 button {
+  border: none;
+  position: absolute;
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+  right: 0;
+  top: 120%;
+}
+.contact .contact-wrapper .col-2 button:hover {
+  background-color: #666666;
+  color: var(--white);
+}
+.main .map {
+  width: 100%;
+  filter: grayscale(50%);
+  vertical-align: middle;
+  border-style: none;
+}
+
+footer {
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .inter {
+  font-size: 2.4rem;
+}
+
+footer .author {
+  padding: 16px 0;
+}
+footer .author a {
+  text-decoration: underline red;
+}
+
+/* modal */
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /* opacity: 0.1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 900px;
+  height: 472px;
+  background-color: var(--white);
+  /* background-color: aqua; */
+}
+.modal-container .modal-name {
+  /* background-color: #009688; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #009688;
+  color: var(--white);
+  font-size: 3rem;
+  height: 130px;
+  letter-spacing: 4px;
+}
+.modal-container .modal-name span {
+  margin-left: 12px;
+}
+.modal-container .modal-name button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 18px 18px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container .modal-name button:hover {
+  background-color: #ccc;
+  color: var(--black);
+}
+.modal-content {
+  padding: 0 16px;
+}
+.modal-container .row {
+}
+.modal-container .row .title {
+  margin: 15px 0;
+}
+.modal-container .row input {
+  width: 100%;
+  padding: 8px;
 }
