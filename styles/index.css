@@ -379,6 +379,8 @@ footer .author a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  display: none;
 }
 
 .modal-container {
